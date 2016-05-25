@@ -11,6 +11,7 @@
     <AssemblyName>VietShop.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,7 +50,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\DBFatory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IReponsitory.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\ReponsitoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWord.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reponsitories\FooterRepository.cs" />
+    <Compile Include="Reponsitories\MenuGroupRepository.cs" />
+    <Compile Include="Reponsitories\MenuRepository.cs" />
+    <Compile Include="Reponsitories\OrderDetailRepository.cs" />
+    <Compile Include="Reponsitories\OrderRepository.cs" />
+    <Compile Include="Reponsitories\PageRepository.cs" />
+    <Compile Include="Reponsitories\PostCategoryRepository.cs" />
+    <Compile Include="Reponsitories\PostRepository.cs" />
+    <Compile Include="Reponsitories\PostTagRepository.cs" />
+    <Compile Include="Reponsitories\ProductCategoryRepository.cs" />
+    <Compile Include="Reponsitories\ProductRepository.cs" />
+    <Compile Include="Reponsitories\ProductTagRepository.cs" />
+    <Compile Include="Reponsitories\SlideRepository.cs" />
+    <Compile Include="Reponsitories\SupportOnlineRepository.cs" />
+    <Compile Include="Reponsitories\SystemConfigRepository.cs" />
+    <Compile Include="Reponsitories\TagRepository.cs" />
+    <Compile Include="Reponsitories\VisitorStasticRepository.cs" />
+    <Compile Include="VietShopDBContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -59,6 +86,10 @@
     <ProjectReference Include="..\VietShop.Common\VietShop.Common.csproj">
       <Project>{8be90720-4b53-4f8b-b49f-51a195f8d84d}</Project>
       <Name>VietShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VietShop.Model\VietShop.Model.csproj">
+      <Project>{6eb8ba9e-6967-4447-bf9e-31448c54e19c}</Project>
+      <Name>VietShop.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

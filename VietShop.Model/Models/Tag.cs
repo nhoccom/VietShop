@@ -8,9 +8,9 @@ namespace VietShop.Model.Models
     public class Tag
     {
         [Key]
+        [Column(TypeName = "varchar")]
         [MaxLength(50)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        public string TagID { set; get; }
 
 
         [Required]

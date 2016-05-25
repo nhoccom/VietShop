@@ -27,7 +27,8 @@ namespace VietShop.Model.Models
         [MaxLength(256)]
         public string Image { set; get; }
 
-        public XElement MoreImages { set; get; }
+        [Column(TypeName ="xml")]
+        public string MoreImages { set; get; }
 
         [MaxLength(500)]
         public string Description { set; get; }

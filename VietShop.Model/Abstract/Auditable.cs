@@ -27,5 +27,7 @@ namespace VietShop.Model.Abstract
         public string MetaDescription { set; get; }
 
         public bool Status { get; set; }
+
+        
     }
 }
